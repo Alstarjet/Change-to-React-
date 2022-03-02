@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>  
+        :root{
+            --blanco:#ffff;
+            --negro:#0000;
+            --color001:#C7C7C7;
+            --colortextoinput:#f7f7f7;
+            --verdehospital:#acd9b2;
+            --sm:14px;
+            --md:16px;
+            --lg:20px;
+
+        }
+        body{  
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .carga{
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .formulario-contenedor{
+            display: grid;
+            grid-template-rows:auto 1fr auto;
+            width: 300px;
+        }
+        .logo{
+            width: 150px;
+            justify-self: center;
+            margin-bottom: 52px;
+            display: none;
+        }
+        .label{
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-top: 12px;
+            margin-bottom: 8px;
+            text-align:left;
+        }
+        .input{
+            background-color: var(--colortextoinput);
+            border: none;
+            border-radius: 12px;
+            height: 32px;
+            font-size: var(--md);
+            margin-bottom: 12px;
+            text-align: left;
+        }
+        .icono-mensaje{
+            justify-self: center;
+            margin-top: 12px;
+            margin-bottom: 24px;
+        }
+        .boton-principal{
+            margin-top: 12px;
+            margin-bottom: 20px;
+            border: none;
+            background-color: var(--verdehospital);
+            height: 52px;
+            font-family: 'Quicksand', sans-serif;
+            font-size: var(--lg);
+            font-weight: bold;
+            border-radius: 8px;
+            color: var(--blanco);
+            width: 100%;
+        }
+        .boton-Secundario{
+            margin-top: 60px;
+            margin-bottom: 60px;
+            border-color: var(--verdehospital);
+            border-style: solid;
+            background-color:var(--blanco);
+            height: 60px;
+            font-family: 'Quicksand', sans-serif;
+            font-size: var(--lg);
+            font-weight: bold;
+            border-radius: 8px;
+            color: var(--verdehospital);
+            width: 100%;
+        }
+        .icono-mensaje{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--colortextoinput);
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        .formulario{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .didnt{
+            margin-top: 24px;
+            font-size: var(--sm);
+            text-align: center;
+        }
+        a{
+            color: var(--verdehospital);
+            text-decoration: none;
+        }
+        .title{
+            font-size: var(--lg);
+            margin-bottom: 20px;
+        }
+        .formulario div{
+            display: flex;
+            flex-direction: column;
+        }
+         @media (max-width:640px) {
+            .title{
+                margin-top: 28px;
+            }
+            .formulario-contenedor{
+                height: 100%;
+            }
+            .formulario{
+                justify-content: space-between
+                ;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="carga">
+        <div class="formulario-contenedor">
+            <h1 class="title">Mi cuenta</h1>
+            <form action="1" class="formulario">
+                <div>
+                    <label for="nombre" class="label label-login">Nombre</label>
+                    <input type="text" id="nombre" 
+                    class="nombre input" placeholder="Alberto">
+                    <label for="email" class="label label-login">Correo</label>
+                    <input type="email" id="email" 
+                    class="email input" placeholder="ejemplo@correo.com">
+                    <label for="contraseña" class="label label-login">Contraseña</label>
+                    <input type="password" id="contraseña" 
+                    class="email input" placeholder="********">
+                </div>
+                <input type="submit" value="Editar" 
+                class="boton-Secundario login-button">
+            </form>
+
+
+        </div>
+    </div>
+</body>
+</html>

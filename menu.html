@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>  
+        :root{
+            --blanco:#ffff;
+            --negro:rgb(0, 0, 0);
+            --color001:#C7C7C7;
+            --colortextoinput:#f7f7f7;
+            --verdehospital:#acd9b2;
+            --sm:14px;
+            --md:16px;
+            --lg:20px;
+
+        }
+        body{  
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }        
+        .menu-escritorio{
+            width: 100px;
+            height: auto;
+            border: 1px solid var(--verdehospital);
+            border-radius: 6px;
+        }
+        .menu-escritorio ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-weight: bold;
+        }
+        .menu-escritorio ul li{
+            text-align: end;
+            margin-top: 16px;
+            margin-right: 12px;            
+        }
+        .menu-escritorio ul li:last-child{
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-top: 1px solid var(--color001);
+        }
+        .menu-escritorio ul li:last-child a{
+            color: var(--verdehospital);
+            font-size: var(--sm);
+        }
+        .menu-escritorio ul li a{
+            text-decoration: none;
+            color: var(--negro)
+        }
+        .test{
+            display: grid;
+            justify-items: center;
+            width: 200px;
+            margin: 10px 0px 15px;
+            background-color: #acd9b2;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-escritorio">
+        <ul>   
+            <li>
+                <a href="">Mi Orden</a>
+            </li>
+            <li>
+                <a href="">Cuenta</a>
+            </li>
+            <li>
+                <a href="" class="salir">Salir</a>
+            </li>
+        </ul>
+    </div>
+    <div class="test"><p>gola</p></div>
+</body>
+</html>

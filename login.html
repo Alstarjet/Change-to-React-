@@ -12,7 +12,7 @@
         :root{
             --blanco:#ffff;
             --negro:#0000;
-            --color001:#b6b6b6;
+            --color001:#C7C7C7;
             --colortextoinput:#f7f7f7;
             --verdehospital:#acd9b2;
             --sm:14px;
@@ -20,7 +20,7 @@
             --lg:18px;
 
         }
-        body{
+        body{  
             margin: 0;
             font-family: 'Quicksand', sans-serif;
         }
@@ -41,24 +41,12 @@
             margin-bottom: 52px;
             display: none;
         }
-        .titulo{
-            font-size: var(--lg);
-            margin-bottom: 16px;
-            text-align: center; 
-            font-weight: bold;           
-        }
-        .subtitle{
-            color: var(--color001);
-            font-size: var(--md);
-            text-align: center;
-            margin-top: 0px;
-            margin-bottom: 12px;
-        }
         .label{
             font-size: var(--sm);
             font-weight: bold;
+            margin-top: 12px;
             margin-bottom: 4px;
-            text-align: center;
+            text-align:left;
         }
         .input{
             background-color: var(--colortextoinput);
@@ -67,27 +55,66 @@
             height: 32px;
             font-size: var(--md);
             margin-bottom: 12px;
-            text-align: center;
+            text-align: left;
         }
-        .formulario{
-            display: flex;
-            flex-direction: column;
+        .icono-mensaje{
+            justify-self: center;
+            margin-top: 12px;
+            margin-bottom: 24px;
         }
         .boton-principal{
+            margin-top: 12px;
             border: none;
             background-color: var(--verdehospital);
-            height: 32px;
+            height: 52px;
             font-family: 'Quicksand', sans-serif;
-            font-size: var(--sm);
+            font-size: var(--lg);
             font-weight: bold;
             border-radius: 8px;
             color: var(--blanco);
             width: 100%;
         }
+        .boton-Secundario{
+            margin-top: 60px;
+            border-color: var(--verdehospital);
+            border-style: solid;
+            background-color:var(--blanco);
+            height: 60px;
+            font-family: 'Quicksand', sans-serif;
+            font-size: var(--lg);
+            font-weight: bold;
+            border-radius: 8px;
+            color: var(--verdehospital);
+            width: 100%;
+        }
+        .icono-mensaje{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--colortextoinput);
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        .formulario{
+            display: flex;
+            flex-direction: column;
+        }
+        .didnt{
+            margin-top: 24px;
+            font-size: var(--sm);
+            text-align: center;
+        }
+        a{
+            color: var(--verdehospital);
+            text-decoration: none;
+        }
         @media (max-width:640px) {
             .logo{
                 display: block;
             }
+            .boton-Secundario{
+            margin-top: 160px;
         }
     </style>
 </head>
@@ -95,21 +122,20 @@
     <div class="carga">
         <div class="formulario-contenedor">
             <img src="./Platzi_YardSale_Logos/logo_yard_sale.svg" alt="logo" class="logo">
-            <h1 class="titulo">Crea una nueva contraseña</h1>
-            <p class="subtitle">ingresa una nueva contraseña para tu cuenta</p>
             <form action="1" class="formulario">
-                <label for="contraseña" class="label">Contraseña</label>
+                <label for="correo" class="label label-login">Correo</label>
+                <input type="email" id="correo" 
+                class="correo input" placeholder="ejemplo@mail.com">
+                <label for="contraseña" class="label label-login">Contraseña</label>
                 <input type="password" id="contraseña" 
-                class="input-contraseña input" placeholder="************">
-                <label for="new-contraseña" class="label">Nueva Contraseña</label>
-                <input type="password" id="new-contraseña" 
-                class="input-contraseña input" placeholder="************">
-                <input type="submit" value="Confirmar" 
+                class="contraseña input" placeholder="************">
+                <input type="submit" value="Log in" 
                 class="boton-principal login-button">
             </form>
+            <span class="didnt"><a href="">Olvidaste tu contraseña?</a></span>
+            <input type="submit" value="Sign up" 
+            class="boton-Secundario">
         </div>
     </div>
-    <! ––existen input que pueden ser botones con type submit
-      ––>
 </body>
 </html>

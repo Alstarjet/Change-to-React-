@@ -12,7 +12,7 @@
         :root{
             --blanco:#ffff;
             --negro:#0000;
-            --color001:#b6b6b6;
+            --color001:#C7C7C7;
             --colortextoinput:#f7f7f7;
             --verdehospital:#acd9b2;
             --sm:14px;
@@ -20,7 +20,7 @@
             --lg:18px;
 
         }
-        body{
+        body{  
             margin: 0;
             font-family: 'Quicksand', sans-serif;
         }
@@ -69,20 +69,40 @@
             margin-bottom: 12px;
             text-align: center;
         }
-        .formulario{
-            display: flex;
-            flex-direction: column;
+        .icono-mensaje{
+            justify-self: center;
+            margin-top: 12px;
+            margin-bottom: 24px;
         }
         .boton-principal{
             border: none;
             background-color: var(--verdehospital);
-            height: 32px;
+            height: 40px;
             font-family: 'Quicksand', sans-serif;
-            font-size: var(--sm);
+            font-size: var(--lg);
             font-weight: bold;
             border-radius: 8px;
             color: var(--blanco);
             width: 100%;
+        }
+        .icono-mensaje{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--colortextoinput);
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        .didnt{
+            margin-top: 24px;
+            font-size: var(--sm);
+            text-align: center;
+        }
+        a{
+            color: var(--verdehospital);
+            text-decoration: none;
+            font-style: italic;
         }
         @media (max-width:640px) {
             .logo{
@@ -95,21 +115,17 @@
     <div class="carga">
         <div class="formulario-contenedor">
             <img src="./Platzi_YardSale_Logos/logo_yard_sale.svg" alt="logo" class="logo">
-            <h1 class="titulo">Crea una nueva contraseña</h1>
-            <p class="subtitle">ingresa una nueva contraseña para tu cuenta</p>
-            <form action="1" class="formulario">
-                <label for="contraseña" class="label">Contraseña</label>
-                <input type="password" id="contraseña" 
-                class="input-contraseña input" placeholder="************">
-                <label for="new-contraseña" class="label">Nueva Contraseña</label>
-                <input type="password" id="new-contraseña" 
-                class="input-contraseña input" placeholder="************">
-                <input type="submit" value="Confirmar" 
+            <h1 class="titulo">Email a sido enviado</h1>
+            <p class="subtitle">Por favor checa tu bandeja de entrada para tener
+                instrucciones de como cambiar tu contraseña
+            </p>
+            <div class="icono-mensaje">
+                <img src="./Platzi_YardSale_Icons/email.svg" alt="Mensaje">
+            </div>
+            <input type="submit" value="Login" 
                 class="boton-principal login-button">
-            </form>
+            <span class="didnt">No reciviste el Email? <a href="">Reenviar</a></span>
         </div>
     </div>
-    <! ––existen input que pueden ser botones con type submit
-      ––>
 </body>
 </html>
